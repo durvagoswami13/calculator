@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f7f7f7;
+      }
+
+      .calculator {
+        border: 2px solid #333;
+        border-radius: 8px;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .display {
+        width: 100%;
+        padding: 10px;
+        font-size: 2rem;
+        border: none;
+        border-bottom: 2px solid #333;
+        margin-bottom: 20px;
+        text-align: right;
+      }
+
+      .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+      }
+
+      button {
+        padding: 15px;
+        font-size: 1.5rem;
+        border: none;
+        background-color: #e0e0e0;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.2s ease;
+      }
+
+      button:hover {
+        background-color: #ccc;
+      }
+
+ 
+.buttons{
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+   
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <h1>Calculator</h1>
+      <input type="text" id="display" class="display" disabled />
+      <div class="buttons">
+        <button onclick="clearinput()">C</button>
+        <button onclick="takeinput('/')">/</button>
+        <button onclick="takeinput('*')">*</button>
+        <button onclick="deleteLast()">DEL</button>
+        <button onclick="takeinput('-')">-</button>
+        <button onclick="takeinput('+')">+</button>
+        <button onclick="takeinput('7')">7</button>
+        <button onclick="takeinput('8')">8</button>
+        <button onclick="takeinput('9')">9</button>
+        <button onclick="takeinput('4')">4</button>
+        <button onclick="takeinput('5')">5</button>
+        <button onclick="takeinput('6')">6</button>
+        <button onclick="takeinput('1')">1</button>
+        <button onclick="takeinput('2')">2</button>
+        <button onclick="takeinput('3')">3</button>
+        <button onclick="calculateResult()">=</button>
+        <button onclick="takeinput('0')">0</button>
+        <button onclick="takeinput('.')">.</button>
+      </div>
+    </div>
+
+<script src="calculator.js"></script>
+</body>
+</html>
